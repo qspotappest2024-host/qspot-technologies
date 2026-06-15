@@ -1,0 +1,59 @@
+# QSpot Technologies — GitHub Pages deployment
+# Place at: .github/workflows/deploy.yml in the repo whose ROOT holds the
+# contents of this `corporate/` folder (e.g. a new `qspot-technologies` repo).
+#
+# This is a pure static site — no API keys, no secrets to inject.
+#
+# SETUP (one-time):
+#   1. Create a repo and put the CONTENTS of corporate/ at its root
+#      (index.html, css/, assets/, CNAME, robots.txt, sitemap.xml, .nojekyll).
+#   2. Settings → Pages → Source → GitHub Actions.
+#   3. Settings → Pages → Custom domain → qspottechnologies.com (matches CNAME).
+#   4. Configure Porkbun DNS (see README.md), then enable "Enforce HTTPS".
+
+name: Deploy QSpot Technologies
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          # Copy everything except VCS / CI / build output into the artifact
+          rsync -a --exclude '.git' --exclude '.github' --exclude '_site' ./ _site/
+          touch _site/.nojekyll
+          echo "--- Site contents ---"
+          ls -la _site/
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
