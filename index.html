@@ -34,6 +34,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "QSpot Technologies",
+        "legalName": "QSpot Technologies Inc.",
         "url": "https://qspottechnologies.com",
         "logo": "https://qspottechnologies.com/assets/images/qspot_logo.png",
         "description": "QSpot Technologies is the company behind QSpot, a peer-to-peer marketplace for discovering, listing, and booking local spots and services.",
@@ -45,7 +46,7 @@
         },
         "contactPoint": {
             "@type": "ContactPoint",
-            "email": "admin@qspotmarketplace.com",
+            "email": "info@qspottechnologies.com",
             "contactType": "customer support"
         },
         "sameAs": ["https://www.qspotmarketplace.com"]
@@ -195,8 +196,8 @@
                 <div class="contact">
                     <h2>Let's talk.</h2>
                     <p>For partnerships, press, or support, we'd love to hear from you. We read every message.</p>
-                    <a href="mailto:admin@qspotmarketplace.com" class="btn btn-primary">Email Us</a>
-                    <a href="mailto:admin@qspotmarketplace.com" class="email">admin@qspotmarketplace.com</a>
+                    <a href="mailto:info@qspottechnologies.com" class="btn btn-primary">Email Us</a>
+                    <a href="mailto:info@qspottechnologies.com" class="email">info@qspottechnologies.com</a>
                 </div>
             </div>
         </section>
@@ -258,6 +259,16 @@
             });
 
             var toggle = document.getElementById('theme-toggle');
+            function syncToggleLabel() {
+                var html = document.documentElement;
+                var cur = html.getAttribute('data-theme');
+                var osDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var isDark = cur === 'dark' || (cur !== 'light' && osDark);
+                var label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+                toggle.setAttribute('aria-label', label);
+                toggle.setAttribute('title', label);
+            }
+            syncToggleLabel();
             toggle.addEventListener('click', function () {
                 var html = document.documentElement;
                 var cur = html.getAttribute('data-theme');
@@ -265,6 +276,7 @@
                 var isDark = cur === 'dark' || (cur !== 'light' && osDark);
                 html.setAttribute('data-theme', isDark ? 'light' : 'dark');
                 localStorage.setItem('qspot-theme', isDark ? 'light' : 'dark');
+                syncToggleLabel();
             });
         });
     </script>
