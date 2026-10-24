@@ -14,7 +14,8 @@ light/dark and a manual theme toggle. No frameworks, no build step, no secrets.
 | `css/corporate.css` | Brand styles + light/dark |
 | `assets/images/qspot-technologies-horizontal.svg` | QSpot Technologies logo — nav and footer (white on purple, ground baked in) |
 | `assets/images/qspot-technologies-square-512.png` | Organization logo in the JSON-LD structured data |
-| `assets/images/qspot_logo.png` | QSpot product icon (hero/product cards) and favicon |
+| `assets/images/qspot-marketplace-stacked.svg` | QSpot Marketplace logo — hero card and product card (source: `brand/marketplace-logo/`) |
+| `assets/images/qspot_logo.png` | QSpot app icon — favicon only |
 | `assets/images/app-icon-1024.png` | Apple touch icon |
 | `assets/images/og-image.png` | 1200×630 social share card — the QSpot Technologies logo |
 | `CNAME` | `qspottechnologies.com` (custom domain) |
