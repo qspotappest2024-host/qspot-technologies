@@ -12,9 +12,11 @@ light/dark and a manual theme toggle. No frameworks, no build step, no secrets.
 |---|---|
 | `index.html` | The entire single-page site (nav, hero, mission, product, approach, contact, footer) |
 | `css/corporate.css` | Brand styles + light/dark |
-| `assets/images/qspot_logo.png` | Logo (nav, footer, favicon) |
+| `assets/images/qspot-technologies-horizontal.svg` | QSpot Technologies logo — nav and footer (white on purple, ground baked in) |
+| `assets/images/qspot-technologies-square-512.png` | Organization logo in the JSON-LD structured data |
+| `assets/images/qspot_logo.png` | QSpot product icon (hero/product cards) and favicon |
 | `assets/images/app-icon-1024.png` | Apple touch icon |
-| `assets/images/og-image.png` | 1200×630 social share card (placeholder — replace anytime) |
+| `assets/images/og-image.png` | 1200×630 social share card — the QSpot Technologies logo |
 | `CNAME` | `qspottechnologies.com` (custom domain) |
 | `robots.txt`, `sitemap.xml`, `.nojekyll` | SEO + Pages hygiene |
 | `.github/workflows/deploy.yml` | GitHub Pages deploy workflow |

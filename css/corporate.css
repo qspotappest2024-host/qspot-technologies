@@ -88,6 +88,7 @@ section { padding: 96px 0; }
 .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; font-size: 1.22rem; color: var(--text); }
 .brand img { width: 36px; height: 36px; border-radius: 10px; }
 .brand span { color: var(--primary-light); }
+.brand.brand-logo img { width: auto; height: 40px; border-radius: 10px; }
 .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
 .nav-links a { font-size: 0.94rem; font-weight: 500; color: var(--muted); transition: color var(--t); }
 .nav-links a:hover { color: var(--primary-light); }
@@ -244,6 +245,7 @@ section[id] { scroll-margin-top: calc(66px + env(safe-area-inset-top, 0px)); }
   section[id] { scroll-margin-top: calc(60px + env(safe-area-inset-top, 0px)); }
   .brand { gap: 9px; font-size: 1.06rem; }
   .brand img { width: 32px; height: 32px; border-radius: 9px; }
+  .nav .brand.brand-logo img { height: 32px; width: auto; }
   .footer .brand { font-size: 1.15rem; }
 
   .sec-head { margin-bottom: 30px; }
