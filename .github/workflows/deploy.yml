@@ -2,11 +2,12 @@
 # Place at: .github/workflows/deploy.yml in the repo whose ROOT holds the
 # contents of this `corporate/` folder (e.g. a new `qspot-technologies` repo).
 #
-# This is a pure static site — no API keys, no secrets to inject.
+# Static site — no API keys, no secrets to inject. One build step writes the real
+# French page (/fr/) from the English HTML plus its French dictionary.
 #
 # SETUP (one-time):
 #   1. Create a repo and put the CONTENTS of corporate/ at its root
-#      (index.html, css/, assets/, CNAME, robots.txt, sitemap.xml, .nojekyll).
+#      (index.html, css/, js/, tools/, assets/, CNAME, robots.txt, sitemap.xml, .nojekyll).
 #   2. Settings → Pages → Source → GitHub Actions.
 #   3. Settings → Pages → Custom domain → qspottechnologies.com (matches CNAME).
 #   4. Configure Porkbun DNS (see README.md), then enable "Enforce HTTPS".
@@ -41,10 +42,32 @@ jobs:
         run: |
           mkdir -p _site
           # Copy everything except VCS / CI / build output into the artifact
-          rsync -a --exclude '.git' --exclude '.github' --exclude '_site' ./ _site/
+          # tools/ is build tooling, not site content.
+          rsync -a --exclude '.git' --exclude '.github' --exclude '_site' --exclude 'tools' ./ _site/
           touch _site/.nojekyll
           echo "--- Site contents ---"
           ls -la _site/
+
+      # Real French page (/fr/) + hreflang. The English HTML stays the only source:
+      # tools/build-i18n.cjs applies the page's own French dictionary at build time
+      # and writes a static copy under _site/fr/, so search engines can index French
+      # instead of the browser-side ?lang=fr. linkedom is installed into the
+      # runner's temp dir only (there is no package.json in this repo).
+      - name: Build French page
+        run: |
+          npm install --no-save --no-package-lock --no-audit --no-fund --prefix "$RUNNER_TEMP/i18n" linkedom@0.18.14
+          NODE_PATH="$RUNNER_TEMP/i18n/node_modules" node tools/build-i18n.cjs _site
+
+      # Cheap assertion: a broken build step fails HERE, not as a 404 found later.
+      - name: Verify assembled site
+        run: |
+          fail=0
+          for f in index.html fr/index.html js/qspot-lang.js assets/images/qspot-marche-fr-square.svg; do
+            if [ -e "_site/$f" ]; then echo "✓ _site/$f"; else echo "::error::_site/$f is MISSING after assembly"; fail=1; fi
+          done
+          grep -q 'lang="fr-CA"' _site/fr/index.html || { echo "::error::_site/fr/index.html is not French"; fail=1; }
+          grep -q 'hreflang="fr-CA"' _site/index.html || { echo "::error::hreflang missing from the English page"; fail=1; }
+          [ "$fail" -eq 0 ] || exit 1
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

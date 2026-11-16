@@ -4,7 +4,8 @@ A polished, single-page static corporate site for **QSpot Technologies**, the
 company behind the QSpot marketplace app. Served at **https://qspottechnologies.com**.
 
 Reuses the QSpot brand (logo + aubergine/steel-blue palette) with automatic
-light/dark and a manual theme toggle. No frameworks, no build step, no secrets.
+light/dark and a manual theme toggle, in English and Canadian French. No frameworks and
+no secrets; one small build step writes the French page.
 
 ## Files
 
@@ -12,6 +13,9 @@ light/dark and a manual theme toggle. No frameworks, no build step, no secrets.
 |---|---|
 | `index.html` | The entire single-page site (nav, hero, mission, product, approach, contact, footer) |
 | `css/corporate.css` | Brand styles + light/dark |
+| `js/qspot-lang.js` | Language layer: shared French strings, the FR/EN switcher, the top-bar pill, `QSLang.apply()` |
+| `tools/build-i18n.cjs` | Deploy-time build: writes the static French page `/fr/` with hreflang, canonical and French metadata |
+| `assets/images/qspot-marche-fr-square.svg` | French "QSpot Marché" square logo (swapped in on the French page) |
 | `assets/images/qspot-technologies-horizontal.svg` | QSpot Technologies logo — nav and footer (white on purple, ground baked in) |
 | `assets/images/qspot-technologies-square-512.png` | Organization logo in the JSON-LD structured data |
 | `assets/images/qspot-marketplace-square.svg` | QSpot Marketplace square logo — hero card and product card (source: `brand/marketplace-logo/`) |
@@ -19,8 +23,29 @@ light/dark and a manual theme toggle. No frameworks, no build step, no secrets.
 | `assets/images/app-icon-1024.png` | Apple touch icon |
 | `assets/images/og-image.png` | 1200×630 social share card — the QSpot Technologies logo |
 | `CNAME` | `qspottechnologies.com` (custom domain) |
-| `robots.txt`, `sitemap.xml`, `.nojekyll` | SEO + Pages hygiene |
+| `robots.txt`, `sitemap.xml`, `.nojekyll` | SEO + Pages hygiene (the sitemap lists `/` and `/fr/` with hreflang alternates) |
 | `.github/workflows/deploy.yml` | GitHub Pages deploy workflow |
+
+## French version
+
+The English `index.html` is the only source. Its French text lives in an inline
+`QSLang.apply({...})` dictionary next to the page script; strings shared by every page
+(navigation, footer, theme labels) live in `COMMON_FR` in `js/qspot-lang.js`. Elements opt in
+with `data-i18n` (inner HTML) or `data-i18n-attr="attr:key;attr:key"`.
+
+- **At deploy**, `tools/build-i18n.cjs` writes `_site/fr/index.html` (`lang="fr-CA"`, French title,
+  description, Open Graph, JSON-LD, the "QSpot Marché" logo) and adds hreflang alternates to both pages.
+- **At runtime** the language is chosen from `data-qs-lang`, then `?lang=`, then the remembered choice,
+  then the browser language. The FR | EN switcher in the menu (and the pill in the top bar on tablets and phones)
+  moves between `/fr/` and `/`.
+- **Dictionary links must be absolute** (`https://www.qspotmarketplace.com/...` or root-absolute). The French page
+  lives at `/fr/`, so a relative link would resolve to `/fr/...` and 404.
+- Links to the marketplace go to its French pages (`/fr/`, `/web/premium.html?lang=fr`, etc.).
+- To add a string: put the French in the dictionary, add `data-i18n="key"` to the English element, and keep the
+  key names stable. Third-party names carry the owners' credit lines (footer), never our symbols.
+
+To preview locally: `npm i linkedom@0.18.14`, then `node tools/build-i18n.cjs <folder containing a copy of the site>` and
+serve that folder.
 
 ## Deploy to GitHub Pages
 

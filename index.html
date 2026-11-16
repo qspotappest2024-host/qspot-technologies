@@ -63,25 +63,26 @@
 </head>
 <body>
 
-    <a href="#main" class="skip">Skip to content</a>
+    <a href="#main" class="skip" data-i18n="skip">Skip to content</a>
 
     <!-- Nav -->
     <nav class="nav" id="nav" aria-label="Main navigation">
         <div class="nav-in">
-            <a href="#top" class="brand brand-logo" aria-label="QSpot Technologies — home"><img src="assets/images/qspot-technologies-horizontal.svg" alt="QSpot Technologies" width="241" height="40"></a>
+            <a href="#top" class="brand brand-logo" aria-label="QSpot Technologies — home" data-i18n-attr="aria-label:brand_aria"><img src="assets/images/qspot-technologies-horizontal.svg" alt="QSpot Technologies" width="241" height="40"></a>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#product">What We Build</a></li>
-                <li><a href="#approach">Approach</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://www.qspotmarketplace.com" class="nav-cta" target="_blank" rel="noopener">Visit QSpot Marketplace ↗</a></li>
+                <li><a href="#mission" data-i18n="nav_mission">Mission</a></li>
+                <li><a href="#product" data-i18n="nav_build">What We Build</a></li>
+                <li><a href="#approach" data-i18n="nav_approach">Approach</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li class="nav-lang"><span data-langbar><a href="/fr/" lang="fr" hreflang="fr-CA">Français</a> &nbsp;|&nbsp; <span class="cur" lang="en">English</span></span></li>
+                <li><a href="https://www.qspotmarketplace.com" class="nav-cta" target="_blank" rel="noopener" data-i18n="nav_cta" data-i18n-attr="href:href_mkt">Visit QSpot Marketplace ↗</a></li>
             </ul>
             <div class="nav-tools">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode" data-i18n-attr="aria-label:toggle_dark;title:toggle_dark">
                     <svg class="moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                     <svg class="sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
                 </button>
-                <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+                <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" data-i18n-attr="aria-label:toggle_menu"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
@@ -95,18 +96,18 @@
                 <div class="hero-grid">
                     <div>
                         <span class="eyebrow">QSpot Technologies</span>
-                        <h1>Technology for the <span class="grad">real world.</span></h1>
-                        <p class="lead">We build technologies that connect people to the spaces and services around them — designed for trust, built for everyday life, and engineered for both iOS and Android.</p>
+                        <h1 data-i18n="h1">Technology for the <span class="grad">real world.</span></h1>
+                        <p class="lead" data-i18n="lead">We build technologies that connect people to the spaces and services around them — designed for trust, built for everyday life, and engineered for both iOS and Android.</p>
                         <div class="hero-actions">
-                            <a href="https://www.qspotmarketplace.com" class="btn btn-primary" target="_blank" rel="noopener">Explore QSpot Marketplace ↗</a>
-                            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+                            <a href="https://www.qspotmarketplace.com" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="hero_cta1" data-i18n-attr="href:href_mkt">Explore QSpot Marketplace ↗</a>
+                            <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta2">Get in Touch</a>
                         </div>
                     </div>
-                    <aside class="hero-card" aria-label="Our product">
+                    <aside class="hero-card" aria-label="Our product" data-i18n-attr="aria-label:card_aria">
                         <img src="assets/images/qspot-marketplace-square.svg" alt="" class="logo-tile" width="112" height="112">
-                        <h3>QSpot Marketplace</h3>
-                        <p>Our flagship product — a peer-to-peer marketplace to buy and sell your place in line. A fair, one-for-one swap, anywhere in Canada.</p>
-                        <div class="row"><span>Coming soon to</span><b>iOS &amp; Android</b></div>
+                        <h3 data-i18n="mkt_name">QSpot Marketplace</h3>
+                        <p data-i18n="card_p">Our flagship product — a peer-to-peer marketplace to buy and sell your place in line. A fair, one-for-one swap, anywhere in Canada.</p>
+                        <div class="row"><span data-i18n="soon">Coming soon to</span><b data-i18n="plat">iOS &amp; Android</b></div>
                     </aside>
                 </div>
             </div>
@@ -116,20 +117,20 @@
         <section class="mission" id="mission">
             <div class="container">
                 <div class="sec-head">
-                    <span class="eyebrow">Our Mission</span>
-                    <h2>The most valuable marketplace is the one in your neighborhood.</h2>
+                    <span class="eyebrow" data-i18n="m_eyebrow">Our Mission</span>
+                    <h2 data-i18n="m_h2">The most valuable marketplace is the one in your neighborhood.</h2>
                 </div>
                 <div class="mission-grid">
                     <div>
-                        <p>QSpot Technologies was founded on a simple conviction: connecting people with the spaces and services around them shouldn't be complicated. Whether someone has a spot to share or is looking for one nearby, that connection should feel effortless and safe.</p>
-                        <p>We build software that empowers individuals and small businesses to put their space and skills to work, while giving people a trusted way to discover local opportunities they'd never find otherwise.</p>
-                        <p>Everything we make starts local, respects privacy, and is engineered to the same standard whether you're on iPhone or Android.</p>
+                        <p data-i18n="m_p1">QSpot Technologies was founded on a simple conviction: connecting people with the spaces and services around them shouldn't be complicated. Whether someone has a spot to share or is looking for one nearby, that connection should feel effortless and safe.</p>
+                        <p data-i18n="m_p2">We build software that empowers individuals and small businesses to put their space and skills to work, while giving people a trusted way to discover local opportunities they'd never find otherwise.</p>
+                        <p data-i18n="m_p3">Everything we make starts local, respects privacy, and is engineered to the same standard whether you're on iPhone or Android.</p>
                     </div>
                     <div class="stat-grid">
-                        <div class="stat"><div class="n">2024</div><div class="l">Founded</div></div>
-                        <div class="stat"><div class="n">2</div><div class="l">Platforms — iOS &amp; Android</div></div>
-                        <div class="stat"><div class="n">BC</div><div class="l">British Columbia, Canada</div></div>
-                        <div class="stat"><div class="n">1</div><div class="l">Mission — connect the local world</div></div>
+                        <div class="stat"><div class="n">2024</div><div class="l" data-i18n="st1">Founded</div></div>
+                        <div class="stat"><div class="n">2</div><div class="l" data-i18n="st2">Platforms — iOS &amp; Android</div></div>
+                        <div class="stat"><div class="n" data-i18n="st3n">BC</div><div class="l" data-i18n="st3">British Columbia, Canada</div></div>
+                        <div class="stat"><div class="n">1</div><div class="l" data-i18n="st4">Mission — connect the local world</div></div>
                     </div>
                 </div>
             </div>
@@ -139,26 +140,26 @@
         <section id="product">
             <div class="container">
                 <div class="sec-head">
-                    <span class="eyebrow">What We Build</span>
-                    <h2>Products that bring the local world online.</h2>
-                    <p>Today that means QSpot Marketplace — and the platform we've built to power it.</p>
+                    <span class="eyebrow" data-i18n="b_eyebrow">What We Build</span>
+                    <h2 data-i18n="b_h2">Products that bring the local world online.</h2>
+                    <p data-i18n="b_p">Today that means QSpot Marketplace — and the platform we've built to power it.</p>
                 </div>
                 <div class="product-card">
                     <img src="assets/images/qspot-marketplace-square.svg" alt="" class="icon" width="120" height="120">
                     <div>
-                        <h3>QSpot Marketplace</h3>
-                        <div class="tagline">Buy &amp; sell your place in line — a fair, one-for-one swap</div>
-                        <p>Waiting has value. QSpot&trade; Marketplace lets people trade their place in any line, anywhere in Canada — the seller steps out the moment the buyer steps in, so the line never gets longer. Find spots on a live map, pay through Stripe with a hold that's only charged once the handoff is confirmed, and trade with verified sellers rated by the community.</p>
+                        <h3 data-i18n="mkt_name">QSpot Marketplace</h3>
+                        <div class="tagline" data-i18n="tagline">Buy &amp; sell your place in line — a fair, one-for-one swap</div>
+                        <p data-i18n="pc_p">Waiting has value. QSpot&trade; Marketplace lets people trade their place in any line, anywhere in Canada — the seller steps out the moment the buyer steps in, so the line never gets longer. Find spots on a live map, pay through Stripe with a hold that's only charged once the handoff is confirmed, and trade with verified sellers rated by the community.</p>
                         <div class="meta">
-                            <span class="chip">iOS &amp; Android</span>
-                            <span class="chip">Payments by Stripe</span>
-                            <span class="chip">Verified sellers</span>
-                            <span class="chip">Live map</span>
+                            <span class="chip" data-i18n="chip1">iOS &amp; Android</span>
+                            <span class="chip" data-i18n="chip2">Payments by Stripe</span>
+                            <span class="chip" data-i18n="chip3">Verified sellers</span>
+                            <span class="chip" data-i18n="chip4">Live map</span>
                         </div>
                     </div>
                     <div class="product-actions">
-                        <a href="https://www.qspotmarketplace.com" class="btn btn-primary" target="_blank" rel="noopener">Visit QSpot Marketplace ↗</a>
-                        <a href="https://www.qspotmarketplace.com/map.html" class="btn btn-ghost" target="_blank" rel="noopener">Live Map</a>
+                        <a href="https://www.qspotmarketplace.com" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="nav_cta" data-i18n-attr="href:href_mkt">Visit QSpot Marketplace ↗</a>
+                        <a href="https://www.qspotmarketplace.com/map.html" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="live_map" data-i18n-attr="href:href_map">Live Map</a>
                     </div>
                 </div>
             </div>
@@ -168,30 +169,30 @@
         <section class="mission" id="approach">
             <div class="container">
                 <div class="sec-head center">
-                    <span class="eyebrow">Our Approach</span>
-                    <h2>How we build.</h2>
-                    <p>A small set of principles shapes every product decision we make.</p>
+                    <span class="eyebrow" data-i18n="a_eyebrow">Our Approach</span>
+                    <h2 data-i18n="a_h2">How we build.</h2>
+                    <p data-i18n="a_p">A small set of principles shapes every product decision we make.</p>
                 </div>
                 <div class="values-grid">
                     <div class="value">
                         <div class="ico art" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 5.5 39 11v11c0 9.6-6.4 16.4-15 20.5C15.4 38.4 9 31.6 9 22V11z" fill="#7FB6E6" fill-opacity=".38" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M24 5.5V42.5" stroke="#fff" stroke-opacity=".35" stroke-width="1.4"/><path d="m16.5 24 5.6 5.6L32.5 18.5" stroke="#F0B429" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                        <h3>Trust by design</h3>
-                        <p>Verified sellers, payments held until the handoff, and ratings on every trade are built into the foundation — not bolted on.</p>
+                        <h3 data-i18n="v1h">Trust by design</h3>
+                        <p data-i18n="v1p">Verified sellers, payments held until the handoff, and ratings on every trade are built into the foundation — not bolted on.</p>
                     </div>
                     <div class="value">
                         <div class="ico art" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 4.5c-8 0-14 6-14 13.6 0 9.6 14 25.4 14 25.4s14-15.8 14-25.4C38 10.5 32 4.5 24 4.5z" fill="#E0457B"/><circle cx="24" cy="18" r="5.6" fill="#fff"/><ellipse cx="24" cy="43.6" rx="9" ry="2.2" fill="#7FB6E6" fill-opacity=".55"/></svg></div>
-                        <h3>Local first</h3>
-                        <p>We prioritize proximity and real-world connection over endless feeds. The best opportunity is often the closest one.</p>
+                        <h3 data-i18n="v2h">Local first</h3>
+                        <p data-i18n="v2p">We prioritize proximity and real-world connection over endless feeds. The best opportunity is often the closest one.</p>
                     </div>
                     <div class="value">
                         <div class="ico art" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M16 21v-5a8 8 0 0 1 16 0v5" stroke="#7FB6E6" stroke-width="4" stroke-linecap="round"/><rect x="10" y="21" width="28" height="21" rx="5" fill="#fff" fill-opacity=".95"/><circle cx="24" cy="30.5" r="3.3" fill="#3F1842"/><path d="M24 33v4.2" stroke="#3F1842" stroke-width="2.8" stroke-linecap="round"/></svg></div>
-                        <h3>Privacy &amp; security</h3>
-                        <p>Encrypted storage, least-privilege access, and a defence-in-depth mindset protect the people who use what we build.</p>
+                        <h3 data-i18n="v3h">Privacy &amp; security</h3>
+                        <p data-i18n="v3p">Encrypted storage, least-privilege access, and a defence-in-depth mindset protect the people who use what we build.</p>
                     </div>
                     <div class="value">
                         <div class="ico art" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="9" width="23" height="30" rx="4.5" fill="#fff" fill-opacity=".95"/><rect x="8.2" y="13" width="16.6" height="19" rx="1.8" fill="#7FB6E6"/><circle cx="16.5" cy="35.6" r="1.3" fill="#3F1842"/><rect x="26" y="15" width="17" height="24" rx="4" fill="#F0B429"/><rect x="28.6" y="18.4" width="11.8" height="14" rx="1.6" fill="#3F1842" fill-opacity=".85"/><circle cx="34.5" cy="36" r="1.1" fill="#3F1842"/></svg></div>
-                        <h3>Cross-platform craft</h3>
-                        <p>One shared, modern codebase delivers a consistent, high-quality experience on both iOS and Android.</p>
+                        <h3 data-i18n="v4h">Cross-platform craft</h3>
+                        <p data-i18n="v4p">One shared, modern codebase delivers a consistent, high-quality experience on both iOS and Android.</p>
                     </div>
                 </div>
             </div>
@@ -201,9 +202,9 @@
         <section id="contact">
             <div class="container">
                 <div class="contact">
-                    <h2>Let's talk.</h2>
-                    <p>For partnerships, press, or support, we'd love to hear from you. We read every message.</p>
-                    <a href="mailto:info@qspottechnologies.com" class="btn btn-primary">Email Us</a>
+                    <h2 data-i18n="c_h2">Let's talk.</h2>
+                    <p data-i18n="c_p">For partnerships, press, or support, we'd love to hear from you. We read every message.</p>
+                    <a href="mailto:info@qspottechnologies.com" class="btn btn-primary" data-i18n="c_btn">Email Us</a>
                     <a href="mailto:info@qspottechnologies.com" class="email">info@qspottechnologies.com</a>
                 </div>
             </div>
@@ -216,33 +217,89 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="brand brand-logo"><img src="assets/images/qspot-technologies-horizontal.svg" alt="QSpot Technologies" width="241" height="40"></div>
-                    <p>The company behind QSpot Marketplace — building technology that connects people to the spaces and services around them.</p>
+                    <p data-i18n="ft_brand">The company behind QSpot Marketplace — building technology that connects people to the spaces and services around them.</p>
                 </div>
                 <div>
-                    <h4>Product</h4>
+                    <h4 data-i18n="ft_product">Product</h4>
                     <ul>
-                        <li><a href="https://www.qspotmarketplace.com" target="_blank" rel="noopener">QSpot Marketplace</a></li>
-                        <li><a href="https://www.qspotmarketplace.com/map.html" target="_blank" rel="noopener">Live Map</a></li>
-                        <li><a href="https://www.qspotmarketplace.com/web/premium.html" target="_blank" rel="noopener">QSpot Premium</a></li>
+                        <li><a href="https://www.qspotmarketplace.com" target="_blank" rel="noopener" data-i18n="mkt_name" data-i18n-attr="href:href_mkt">QSpot Marketplace</a></li>
+                        <li><a href="https://www.qspotmarketplace.com/map.html" target="_blank" rel="noopener" data-i18n="live_map" data-i18n-attr="href:href_map">Live Map</a></li>
+                        <li><a href="https://www.qspotmarketplace.com/web/premium.html" target="_blank" rel="noopener" data-i18n-attr="href:href_premium">QSpot Premium</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Company</h4>
+                    <h4 data-i18n="ft_company">Company</h4>
                     <ul>
-                        <li><a href="#mission">Mission</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="https://www.qspotmarketplace.com/web/privacy.html" target="_blank" rel="noopener">Privacy</a></li>
-                        <li><a href="https://www.qspotmarketplace.com/web/terms.html" target="_blank" rel="noopener">Terms</a></li>
+                        <li><a href="#mission" data-i18n="ft_mission">Mission</a></li>
+                        <li><a href="#contact" data-i18n="ft_contact">Contact</a></li>
+                        <li><a href="https://www.qspotmarketplace.com/web/privacy.html" target="_blank" rel="noopener" data-i18n="ft_privacy" data-i18n-attr="href:href_privacy">Privacy</a></li>
+                        <li><a href="https://www.qspotmarketplace.com/web/terms.html" target="_blank" rel="noopener" data-i18n="ft_terms" data-i18n-attr="href:href_terms">Terms</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; 2026 QSpot Technologies Inc. All rights reserved. &middot; QSpot&trade; is a trademark of QSpot Technologies Inc.</span>
-                <span>British Columbia, Canada</span>
+                <span data-i18n="ft_copy">&copy; 2026 QSpot Technologies Inc. All rights reserved. &middot; QSpot&trade; is a trademark of QSpot Technologies Inc.</span>
+                <span data-i18n="ft_bc">British Columbia, Canada</span>
             </div>
+            <p class="footer-credits" data-i18n="ft_credits">iPhone is a trademark of Apple Inc., registered in the U.S. and other countries and regions. IOS is a trademark or registered trademark of Cisco in the U.S. and other countries and is used under license. Android is a trademark of Google LLC. Stripe is a trademark of Stripe, Inc. Other product and company names are trademarks of their respective owners.</p>
         </div>
     </footer>
 
+    <script src="js/qspot-lang.js"></script>
+    <script>
+        // French for this page (see js/qspot-lang.js). English stays in the markup.
+        QSLang.apply({
+            "doc_title": "QSpot Technologies | La technologie au service du monde réel",
+            "meta_desc": "QSpot Technologies est l'entreprise derrière QSpot Marché, un marché entre particuliers pour acheter et vendre sa place dans la file. Un échange équitable, un pour un, partout au Canada, sur iOS et Android.",
+            "og_desc": "L'entreprise derrière QSpot Marché : achetez et vendez votre place dans la file par un échange équitable, un pour un.",
+            "tw_desc": "L'entreprise derrière QSpot Marché : achetez et vendez votre place dans la file par un échange équitable, un pour un.",
+            "og_alt": "QSpot Technologies : la technologie au service du monde réel",
+            "ld_desc": "QSpot Technologies est l'entreprise derrière QSpot Marché, un marché entre particuliers pour acheter et vendre sa place dans la file : un échange équitable, un pour un.",
+            "card_aria": "Notre produit",
+            "h1": "La technologie au service du <span class=\"grad\">monde réel.</span>",
+            "lead": "Nous concevons des technologies qui relient les gens aux lieux et aux services qui les entourent : pensées pour la confiance, conçues pour le quotidien et développées pour iOS comme pour Android.",
+            "hero_cta1": "Découvrir QSpot Marché ↗",
+            "hero_cta2": "Nous joindre",
+            "card_p": "Notre produit phare : un marché entre particuliers pour acheter et vendre sa place dans la file. Un échange équitable, un pour un, partout au Canada.",
+            "soon": "Bientôt sur",
+            "plat": "iOS et Android",
+            "m_eyebrow": "Notre mission",
+            "m_h2": "Le marché le plus précieux est celui de votre quartier.",
+            "m_p1": "QSpot Technologies est née d'une conviction simple : relier les gens aux lieux et aux services qui les entourent ne devrait pas être compliqué. Qu'on ait une place à partager ou qu'on en cherche une à proximité, la mise en relation doit être simple et sûre.",
+            "m_p2": "Nous créons des logiciels qui permettent aux particuliers et aux petites entreprises de mettre leur espace et leurs compétences à profit, tout en offrant aux gens un moyen fiable de découvrir des occasions locales qu'ils ne trouveraient pas autrement.",
+            "m_p3": "Tout ce que nous faisons commence au niveau local, respecte la vie privée et répond à la même norme, que vous soyez sur iPhone ou sur Android.",
+            "st1": "Année de fondation",
+            "st2": "Plateformes : iOS et Android",
+            "st3n": "C.-B.",
+            "st3": "Colombie-Britannique, Canada",
+            "st4": "Mission : relier le monde local",
+            "b_eyebrow": "Nos produits",
+            "b_h2": "Des produits qui amènent le monde local en ligne.",
+            "b_p": "Aujourd'hui, c'est QSpot Marché, et la plateforme que nous avons bâtie pour le faire fonctionner.",
+            "tagline": "Achetez et vendez votre place dans la file : un échange équitable, un pour un",
+            "pc_p": "Attendre a de la valeur. QSpot&trade; Marché permet d'échanger sa place dans n'importe quelle file, partout au Canada : le vendeur sort au moment où l'acheteur entre, et la file ne s'allonge jamais. Trouvez des places sur une carte en direct, payez par Stripe avec une retenue qui n'est prélevée qu'une fois la passation confirmée, et faites affaire avec des vendeurs vérifiés et évalués par la communauté.",
+            "chip1": "iOS et Android",
+            "chip2": "Paiements par Stripe",
+            "chip3": "Vendeurs vérifiés",
+            "chip4": "Carte en direct",
+            "a_eyebrow": "Notre approche",
+            "a_h2": "Notre façon de bâtir.",
+            "a_p": "Un petit nombre de principes guide chacune de nos décisions de produit.",
+            "v1h": "Confiance dès la conception",
+            "v1p": "Les vendeurs vérifiés, les paiements retenus jusqu'à la passation et les évaluations de chaque échange sont intégrés dès le départ, et non ajoutés après coup.",
+            "v2h": "Le local d'abord",
+            "v2p": "Nous privilégions la proximité et le contact réel plutôt que les fils sans fin. La meilleure occasion est souvent la plus proche.",
+            "v3h": "Vie privée et sécurité",
+            "v3p": "Un stockage chiffré, des accès limités au strict nécessaire et une défense en profondeur protègent les personnes qui utilisent ce que nous créons.",
+            "v4h": "Un savoir-faire multiplateforme",
+            "v4p": "Une seule base de code moderne et partagée offre une expérience cohérente et de grande qualité sur iOS comme sur Android.",
+            "c_h2": "Parlons-en.",
+            "c_p": "Pour un partenariat, une demande des médias ou du soutien, nous serions ravis de vous lire. Nous lisons chaque message.",
+            "c_btn": "Nous écrire",
+            "ft_brand": "L'entreprise derrière QSpot Marché : elle conçoit des technologies qui relient les gens aux lieux et aux services qui les entourent.",
+            "ft_credits": "iPhone est une marque de commerce d’Apple Inc., déposée aux États-Unis et dans d’autres pays et régions. IOS est une marque de commerce ou une marque déposée de Cisco aux États-Unis et dans d’autres pays et est utilisée sous licence. Android est une marque de commerce de Google LLC. Stripe est une marque de commerce de Stripe, Inc. Les autres noms de produits et d’entreprises sont des marques de commerce de leurs propriétaires respectifs."
+        });
+    </script>
     <script>
         (function () {
             // Apply stored / OS theme ASAP
@@ -278,7 +335,7 @@
                 var cur = html.getAttribute('data-theme');
                 var osDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
                 var isDark = cur === 'dark' || (cur !== 'light' && osDark);
-                var label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+                var label = isDark ? QSLang.pick('Switch to light mode', 'Passer au mode clair') : QSLang.pick('Switch to dark mode', 'Passer au mode sombre');
                 toggle.setAttribute('aria-label', label);
                 toggle.setAttribute('title', label);
             }
