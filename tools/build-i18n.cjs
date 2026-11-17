@@ -26,7 +26,7 @@ const vm = require('vm');
 const { parseHTML } = require('linkedom');
 
 const SITE = process.argv[2] || '_site';
-const BASE = 'https://qspottechnologies.com';
+const BASE = 'https://www.qspottechnologies.com';
 const PAGES = ['index.html'];
 const SQUARE_EN = 'qspot-marketplace-square.svg', SQUARE_FR = 'qspot-marche-fr-square.svg';
 

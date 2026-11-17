@@ -9,7 +9,7 @@
 #   1. Create a repo and put the CONTENTS of corporate/ at its root
 #      (index.html, css/, js/, tools/, assets/, CNAME, robots.txt, sitemap.xml, .nojekyll).
 #   2. Settings → Pages → Source → GitHub Actions.
-#   3. Settings → Pages → Custom domain → qspottechnologies.com (matches CNAME).
+#   3. Settings → Pages → Custom domain → www.qspottechnologies.com (matches CNAME).
 #   4. Configure Porkbun DNS (see README.md), then enable "Enforce HTTPS".
 
 name: Deploy QSpot Technologies

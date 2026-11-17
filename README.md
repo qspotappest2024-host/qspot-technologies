@@ -1,7 +1,7 @@
 # QSpot Technologies — Corporate Site
 
 A polished, single-page static corporate site for **QSpot Technologies**, the
-company behind the QSpot marketplace app. Served at **https://qspottechnologies.com**.
+company behind the QSpot marketplace app. Served at **https://www.qspottechnologies.com**.
 
 Reuses the QSpot brand (logo + aubergine/steel-blue palette) with automatic
 light/dark and a manual theme toggle, in English and Canadian French. No frameworks and
@@ -22,7 +22,7 @@ no secrets; one small build step writes the French page.
 | `assets/images/qspot_logo.png` | QSpot app icon — favicon only |
 | `assets/images/app-icon-1024.png` | Apple touch icon |
 | `assets/images/og-image.png` | 1200×630 social share card — the QSpot Technologies logo |
-| `CNAME` | `qspottechnologies.com` (custom domain) |
+| `CNAME` | `www.qspottechnologies.com` (custom domain) |
 | `robots.txt`, `sitemap.xml`, `.nojekyll` | SEO + Pages hygiene (the sitemap lists `/` and `/fr/` with hreflang alternates) |
 | `.github/workflows/deploy.yml` | GitHub Pages deploy workflow |
 
@@ -59,11 +59,11 @@ This is a **separate domain** from the marketplace, so it needs its **own repo**
    `.nojekyll`, and `.github/workflows/deploy.yml`.
 3. **Settings → Pages → Source → GitHub Actions** (or "Deploy from a branch →
    main / root" — both work since there's no build).
-4. **Settings → Pages → Custom domain →** `qspottechnologies.com`, Save.
+4. **Settings → Pages → Custom domain →** `www.qspottechnologies.com`, Save.
 
 ## Porkbun DNS (for `qspottechnologies.com`)
 
-The apex `qspottechnologies.com` is the canonical address; `www` redirects to it.
+`www.qspottechnologies.com` is the canonical address; the bare domain `qspottechnologies.com` redirects to it.
 Add these records in Porkbun (Details → DNS for qspottechnologies.com):
 
 | Type | Host | Answer |
