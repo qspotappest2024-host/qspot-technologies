@@ -202,7 +202,7 @@ html[data-theme="dark"] .theme-toggle .moon { display: none; }
 .footer ul a:hover { color: var(--accent-light); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; font-size: 0.84rem; color: rgba(255,255,255,0.62); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
-/* Owners' credit lines for third-party names (Apple, Cisco, Google, Stripe). A legal notice in the
+/* Owners' credit lines for third-party names (Apple, Google, Stripe). A legal notice in the
    same muted tone as the copyright line. */
 .footer-credits { margin: 14px 0 0; max-width: 860px; font-size: 0.75rem; line-height: 1.55; color: rgba(255,255,255,0.5); }
 
